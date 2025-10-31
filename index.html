@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SimpleStorage DApp (HTML/JS)</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Ethers.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+
+</head>
+<body>
+  <main>
+    <h1>SimpleStorage DApp</h1>
+
+    <label>Contract address:
+      <input id="contractAddress" placeholder="0x..." />
+      <button id="loadContract">Load contract</button>
+    </label>
+
+    <section id="walletSection">
+      <button id="connectWallet">Connect Wallet</button>
+      <div id="walletInfo"></div>
+    </section>
+
+    <section class="card">
+      <h2>Read current amount</h2>
+      <div>
+        <button id="readBtn" disabled>Read</button>
+        <span id="currentAmount">—</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Write new amount</h2>
+      <div class="row">
+        <input id="newAmount" type="number" placeholder="Enter new uint amount" />
+        <button id="writeBtn" disabled>Write</button>
+      </div>
+      <div id="txStatus"></div>
+    </section>
+
+    <footer>
+      <small>Built for quick testing. Deploy contract in Remix, paste address, then connect MetaMask.</small>
+    </footer>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+Remix quick deploy (steps)
+1. Open https://remix.ethereum.org
+2. Create a new file and paste contracts/SimpleStorage.sol
+3. Select the Solidity compiler (0.8.x) and compile.
+4. Go to Deploy & Run Transactions, choose an environment (e.g., Injected Web3 to use MetaMask)
+5. Deploy the contract. Copy the deployed contract address and use it in the frontend.
